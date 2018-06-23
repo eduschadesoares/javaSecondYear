@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.PrincipalController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="250.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="180.0" text="Valor inicial na conta (R$):">
+               <VBox.margin>
+                  <Insets left="35.0" right="35.0" top="15.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtFldValorInicial" prefHeight="30.0" prefWidth="150.0">
+               <VBox.margin>
+                  <Insets bottom="15.0" left="50.0" right="50.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="210.0" text="Valor do depósito mensal (R$):">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="15.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtFldMensal" prefHeight="30.0" prefWidth="150.0">
+               <VBox.margin>
+                  <Insets bottom="15.0" left="50.0" right="50.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="150.0" text="Número de parcelas:">
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" top="15.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtFldParcelas" prefHeight="30.0" prefWidth="150.0">
+               <VBox.margin>
+                  <Insets bottom="15.0" left="50.0" right="50.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="150.0" text="Taxa de juros (%):">
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" top="15.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtFldJuros" prefHeight="30.0" prefWidth="150.0">
+               <VBox.margin>
+                  <Insets bottom="15.0" left="50.0" right="50.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+         </children>
+      </VBox>
+      <VBox layoutX="250.0" prefHeight="400.0" prefWidth="350.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="180.0" text="Valor final projetado (R$):">
+               <VBox.margin>
+                  <Insets left="85.0" right="85.0" top="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblFinalProjetado" alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="150.0">
+               <VBox.margin>
+                  <Insets bottom="15.0" left="100.0" right="100.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="180.0" text="Valor total investido (R$):">
+               <VBox.margin>
+                  <Insets left="85.0" right="85.0" top="15.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTotalInvestido" alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="150.0">
+               <VBox.margin>
+                  <Insets bottom="15.0" left="100.0" right="100.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="180.0" text="Valor total de ganho (R$):">
+               <VBox.margin>
+                  <Insets left="85.0" right="85.0" top="15.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTotalGanho" alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="150.0">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="100.0" right="100.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

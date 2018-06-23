@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="280.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.PrincipalController">
+   <children>
+      <HBox prefHeight="280.0" prefWidth="600.0">
+         <children>
+            <VBox prefHeight="280.0" prefWidth="300.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="300.0" text="Depósito Inicial" />
+                  <TextField fx:id="txtFldVlrInicial" prefHeight="30.0" prefWidth="290.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="300.0" text="Depósito Mensal" />
+                  <TextField fx:id="txtFldVlrMensal" prefHeight="30.0" prefWidth="290.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="300.0" text="Número de Meses" />
+                  <TextField fx:id="txtFldNumMeses" prefHeight="30.0" prefWidth="290.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="300.0" text="Taxa de Juros" />
+                  <TextField fx:id="txtFldTxJrs" prefHeight="30.0" prefWidth="290.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin></TextField>
+               </children>
+            </VBox>
+            <VBox prefHeight="280.0" prefWidth="300.0">
+               <children>
+                  <Button fx:id="btnCalcular" mnemonicParsing="false" onAction="#btnClickCalcularJuros" prefHeight="30.0" prefWidth="300.0" text="Calcular">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="300.0" text="Saldo Final" />
+                  <Label fx:id="lblResultSaldoFinal" alignment="CENTER" prefHeight="40.0" prefWidth="300.0" />
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="300.0" text="Total Depositado" />
+                  <Label fx:id="lblResultTtlDepositado" alignment="CENTER" prefHeight="40.0" prefWidth="300.0" />
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="300.0" text="Juros Finais" />
+                  <Label fx:id="lblResultJurosFinais" alignment="CENTER" prefHeight="40.0" prefWidth="300.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
