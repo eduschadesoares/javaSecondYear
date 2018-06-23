@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.PrincipalController">
+   <children>
+      <TabPane tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Cadastro">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0">
+                     <children>
+                        <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <HBox alignment="CENTER" prefWidth="400.0" spacing="5.0">
+                                       <children>
+                                          <Label text="Cálculo do Transporte">
+                                             <font>
+                                                <Font name="MyriadPro-Light" size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="19.0" prefWidth="300.0">
+                                             <children>
+                                                <Label text="Tipo da Figura">
+                                                   <font>
+                                                      <Font name="MyriadPro-Light" size="16.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                   <padding>
+                                                      <Insets left="3.0" />
+                                                   </padding>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <VBox alignment="CENTER" prefHeight="46.0" prefWidth="300.0" spacing="5.0">
+                                             <padding>
+                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                             </padding>
+                                             <children>
+                                                <Label text="Tipo do Material">
+                                                   <font>
+                                                      <Font name="MyriadPro-Light" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="22.0" prefWidth="300.0" spacing="5.0">
+                                             <children>
+                                                <RadioButton fx:id="rdBtnParalelepipedo" mnemonicParsing="false" onAction="#rdBtnParalelepipedoClick" selected="true" text="Paralelepípedo">
+                                                   <toggleGroup>
+                                                      <ToggleGroup fx:id="figura" />
+                                                   </toggleGroup>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                   <padding>
+                                                      <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                                   </padding>
+                                                   <font>
+                                                      <Font name="MyriadPro-Regular" size="12.0" />
+                                                   </font>
+                                                </RadioButton>
+                                                <RadioButton fx:id="rdBtnCilindro" mnemonicParsing="false" onAction="#rdBtnCilindroConeClick" text="Cilindro" toggleGroup="$figura">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                   <padding>
+                                                      <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                                   </padding>
+                                                   <font>
+                                                      <Font name="MyriadPro-Regular" size="12.0" />
+                                                   </font>
+                                                </RadioButton>
+                                                <RadioButton fx:id="rdBtnCone" mnemonicParsing="false" onAction="#rdBtnCilindroConeClick" text="Cone" toggleGroup="$figura">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                   <padding>
+                                                      <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                                   </padding>
+                                                   <font>
+                                                      <Font name="MyriadPro-Regular" size="12.0" />
+                                                   </font>
+                                                </RadioButton>
+                                             </children>
+                                             <cursor>
+                                                <Cursor fx:constant="DEFAULT" />
+                                             </cursor>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="37.0" prefWidth="300.0">
+                                             <children>
+                                                <ComboBox fx:id="cmbMaterial" onAction="#cmbMaterialClick" prefHeight="25.0" prefWidth="200.0" promptText="Material">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                   <HBox.margin>
+                                                      <Insets />
+                                                   </HBox.margin>
+                                                </ComboBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </VBox>
+                              <HBox alignment="CENTER" spacing="10.0">
+                                 <children>
+                                    <VBox alignment="CENTER" spacing="5.0">
+                                       <children>
+                                          <Label text="Altura">
+                                             <font>
+                                                <Font name="MyriadPro-Light" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txtFldAltura" prefWidth="100.0" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="CENTER" spacing="5.0">
+                                       <children>
+                                          <Label fx:id="lblSegundo" text="Largura">
+                                             <font>
+                                                <Font name="MyriadPro-Light" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txtFldSegundo" prefWidth="100.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="vBxTerceiro" alignment="CENTER" spacing="5.0">
+                                       <children>
+                                          <Label text="Profundidade">
+                                             <font>
+                                                <Font name="MyriadPro-Light" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txtFldProfundidade" prefWidth="100.0" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER" prefWidth="400.0">
+                                 <children>
+                                    <CheckBox fx:id="cbxFragil" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Frágil">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <HBox.margin>
+                                          <Insets bottom="3.0" top="3.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="MyriadPro-Light" size="16.0" />
+                                       </font>
+                                    </CheckBox>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </HBox>
+                              <HBox alignment="CENTER" prefWidth="400.0" spacing="5.0">
+                                 <children>
+                                    <Label contentDisplay="CENTER" text="ID">
+                                       <font>
+                                          <Font name="MyriadPro-Light" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtFldId" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER" prefWidth="500.0" spacing="5.0">
+                                 <children>
+                                    <Button fx:id="btnAdicionar" disable="true" mnemonicParsing="false" onAction="#btnAdicionarClick" text="Adicionar">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#btnRemoverPrimeiroClick" text="Remover">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <VBox>
+                                 <children>
+                                    <HBox prefWidth="400.0" spacing="5.0">
+                                       <children>
+                                          <Label text="Número de Objetos">
+                                             <font>
+                                                <Font name="MyriadPro-Light" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lblNumObj" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox prefWidth="400.0" spacing="5.0">
+                                       <children>
+                                          <Label text="Objeto Mais Pesado">
+                                             <font>
+                                                <Font name="MyriadPro-Light" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lblNomeObj" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox prefWidth="400.0" spacing="5.0">
+                                       <children>
+                                          <Label text="Peso do Objeto Mais Pesado">
+                                             <font>
+                                                <Font name="MyriadPro-Light" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lblPesoMaisPesado" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox prefWidth="400.0" spacing="5.0">
+                                       <children>
+                                          <Label text="Total">
+                                             <font>
+                                                <Font name="MyriadPro-Light" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lblPesoTotal" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox prefWidth="400.0" spacing="5.0">
+                                       <children>
+                                          <Label text="Custo do Transporte">
+                                             <font>
+                                                <Font name="MyriadPro-Light" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lblCustoTotal" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox prefWidth="400.0" spacing="5.0">
+                                       <children>
+                                          <Label text="ID">
+                                             <font>
+                                                <Font name="MyriadPro-Light" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lblId" />
+                                       </children>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Rastrear">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
