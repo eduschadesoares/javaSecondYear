@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialdesignicons.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.VendedorEmpresaController">
+    <stylesheets>
+        <URL value="@/styles/Styles.css" />
+    </stylesheets>
+    <children>
+      
+        <VBox AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="6.0">
+            <children>
+                <HBox spacing="5.0">
+                    <children>
+                        <ComboBox fx:id="cmbVendedor" prefHeight="25.0" prefWidth="150.0" />
+                        <Button onAction="#acTotalizarVendedor" prefHeight="25.0" prefWidth="93.0" text="%totalizar.text" />
+                  <Button onAction="#btnLimparClick" prefHeight="25.0" prefWidth="47.0" text="%limparbanco.text" />
+                  <Button onAction="#btnRandomizaClick" prefHeight="25.0" prefWidth="8.0" text="%randomizar.text" />
+                  <Button onAction="#btnImportarClick" prefHeight="25.0" prefWidth="93.0" text="%importar.text" />
+                  <TextField fx:id="txtFldFiltro" onKeyPressed="#onKeyPressFiltrar" prefHeight="25.0" prefWidth="95.0" promptText="%filtrar.text" />
+                  <Button onAction="#acAlertVen" prefHeight="25.0" prefWidth="93.0" text="Alert" />
+                  <Label fx:id="lblNomeEmp" />
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="6.0" left="1.0" top="1.0" />
+                    </VBox.margin>
+                </HBox>   
+                <HBox prefHeight="400.0" prefWidth="738.0">
+                    <children>
+                        <TableView fx:id="tblView" onMouseClicked="#acVerificaEmpresa" prefHeight="397.0" prefWidth="746.0">
+                            <columns>
+                                <TableColumn editable="false" maxWidth="197.0" minWidth="37.0" prefWidth="156.0" resizable="false" style="-fx-alignment: CENTER;" text="%empresa.text">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="empresaFantasia" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn editable="false" maxWidth="235.0" minWidth="0.0" prefWidth="52.0" resizable="false" text="%notas.text">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="numNotas" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn editable="false" maxWidth="209.0" minWidth="0.0" prefWidth="93.0" resizable="false" text="%totalvalor.text">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="formatValorTotal" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn editable="false" maxWidth="229.0" minWidth="0.0" prefWidth="106.0" resizable="false" text="Comissão">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="formatValorComissao" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                        <TableColumn maxWidth="161.0" minWidth="0.0" prefWidth="83.0" resizable="false" text="Bônus Vendedor">
+                           <cellValueFactory>
+                              <PropertyValueFactory property="formatBonusVendedor" />
+                           </cellValueFactory>
+                        </TableColumn>
+                                <TableColumn editable="false" maxWidth="301.0" minWidth="0.0" prefWidth="100.0" resizable="false" text="%percentualcomissao.text">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="formatPercComissao" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                        <TableColumn maxWidth="161.0" minWidth="0.0" prefWidth="89.0" resizable="false" text="Média de comi">
+                           <cellValueFactory>
+                              <PropertyValueFactory property="formatValorMedio" />
+                           </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn maxWidth="161.0" minWidth="0.0" prefWidth="89.0" resizable="false" text="Comissão Final">
+                           <cellValueFactory>
+                              <PropertyValueFactory property="formatValorComissaoFinal" />
+                           </cellValueFactory>
+                        </TableColumn>
+                            </columns>
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                            </columnResizePolicy>
+                            <HBox.margin>
+                                <Insets bottom="3.0" />
+                            </HBox.margin>
+                        </TableView>
+                    </children>
+                    <VBox.margin>
+                        <Insets left="1.0" right="1.0" />
+                    </VBox.margin>
+                </HBox>
+            <ToolBar fx:id="tlBarStatus" prefHeight="21.0" prefWidth="740.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <items>
+                  <Button onAction="#acVerificar" prefHeight="25.0" prefWidth="92.0" text="%verificar.text" />
+                  <ProgressBar fx:id="progressBar" prefHeight="18.0" prefWidth="487.0" />
+                  <Label fx:id="lblVerificando" prefHeight="17.0" prefWidth="53.0" text="%verificando.txt" visible="false" />
+                  <Label fx:id="lbStatus" prefHeight="17.0" prefWidth="74.0" />
+               </items>
+            </ToolBar>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

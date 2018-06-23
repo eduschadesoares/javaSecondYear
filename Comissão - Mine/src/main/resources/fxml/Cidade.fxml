@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import de.jensd.fx.glyphs.materialdesignicons.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.CidadeController">
+    <stylesheets>
+        <URL value="@/styles/Styles.css" />
+    </stylesheets>
+    <children>
+      
+        <VBox AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="6.0">
+            <children>
+                <HBox spacing="5.0">
+                    <children>
+                  <TextField fx:id="txtFldFiltro" onKeyPressed="#onKeyPressFiltrar" promptText="%filtrar.text" />
+                  <Button fx:id="btnAtualiza" mnemonicParsing="false" onAction="#acAtualizar" prefHeight="25.0" prefWidth="85.0" text="%atualiza.text">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#acIncluir" prefHeight="25.0" prefWidth="55.0" text="%addCid.text">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+                  <Button fx:id="btnRem" mnemonicParsing="false" onAction="#acExcluir" prefHeight="25.0" prefWidth="55.0" text="%remCid.text" />
+                  <Button fx:id="btnEditCid" mnemonicParsing="false" onAction="#acEditar" prefHeight="25.0" prefWidth="55.0" text="%editCid.text" />
+                  <Button fx:id="btnAlertaCid" mnemonicParsing="false" onAction="#acAlertarCid" prefHeight="25.0" prefWidth="85.0" text="ALERT">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="6.0" left="1.0" top="1.0" />
+                    </VBox.margin>
+                </HBox>   
+                <HBox prefHeight="400.0" prefWidth="738.0">
+                    <children>
+                        <TableView fx:id="tblView" onMouseClicked="#acAtualizarCidade" prefWidth="740.0">
+                            <columns>
+                                <TableColumn editable="false" maxWidth="737.0" minWidth="150.0" prefWidth="609.0" resizable="false" text="%cidade.text">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="nome" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                        <TableColumn editable="false" maxWidth="737.0" minWidth="0.0" prefWidth="113.0" resizable="false" text="UF">
+                           <cellValueFactory>
+                              <PropertyValueFactory property="uf" />
+                           </cellValueFactory>
+                        </TableColumn>
+                            </columns>
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                            </columnResizePolicy>
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                        </TableView>
+                    </children>
+                    <VBox.margin>
+                        <Insets left="1.0" right="1.0" />
+                    </VBox.margin>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
