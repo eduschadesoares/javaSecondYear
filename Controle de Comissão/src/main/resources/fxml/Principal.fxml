@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="453.0" prefWidth="748.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.PrincipalController">
+    <children>
+        <BorderPane layoutX="77.0" layoutY="75.0" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <StackPane prefHeight="463.0" prefWidth="748.0" BorderPane.alignment="CENTER">
+               <children>
+                      <TabPane tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                              <Tab text="%vendedorempresa.text">
+                                  <content>
+                                      <fx:include source="VendedorEmpresa.fxml" />
+                                  </content>
+                              </Tab>
+                              <Tab text="%empresa.text">
+                                  <content>
+                                      <fx:include source="Empresa.fxml" />
+                                  </content>
+                              </Tab>
+                        <Tab text="%cidade.text">
+                          <content>
+                            <fx:include source="Cidade.fxml" />
+                          </content>
+                        </Tab>
+                          </tabs>
+                      </TabPane>
+               </children>
+            </StackPane>
+         </center>
+         <top>
+            <Label text="%titulo.text" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="0.8714285714285714" startX="1.0" startY="0.48095238095238096">
+                     <stops>
+                        <Stop color="#0515fffc" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+         </top>
+        </BorderPane>
+      <StackPane layoutX="457.0" prefHeight="25.0" prefWidth="287.0" visible="false" AnchorPane.leftAnchor="457.0" AnchorPane.topAnchor="32.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" text="%randomizar.text">
+               <StackPane.margin>
+                  <Insets right="26.0" />
+               </StackPane.margin>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" text="%limparbanco.text">
+               <StackPane.margin>
+                  <Insets left="185.0" />
+               </StackPane.margin>
+            </Button>
+         </children>
+      </StackPane>
+    </children>
+</AnchorPane>

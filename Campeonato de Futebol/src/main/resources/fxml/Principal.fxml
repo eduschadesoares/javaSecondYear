@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.PrincipalController">
+    <children>
+        <VBox layoutX="52.0" prefHeight="600.0" prefWidth="800.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox prefHeight="41.0" prefWidth="840.0">
+                    <children>
+                        <HBox alignment="CENTER">
+                            <children>
+                                <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnAbrirClick" prefHeight="25.0" prefWidth="130.0" text="Abrir Arquivo">
+                                    <HBox.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </HBox.margin>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </Button>
+                        <Button fx:id="btnSalvarJsonCampClick" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#btnSalvarJsonCamp" prefHeight="25.0" prefWidth="130.0" text="Salvar JSON">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                            </children>
+                            <rotationAxis>
+                                <Point3D />
+                            </rotationAxis>
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                        </HBox>
+                  <HBox alignment="TOP_RIGHT" prefHeight="25.0" prefWidth="570.0">
+                     <children>
+                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnCriarCampClick" prefHeight="25.0" prefWidth="130.0" text="Gerar Campeonato" textAlignment="CENTER">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                                <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnFecharProgClick" prefHeight="25.0" prefWidth="130.0" text="Fechar Programa" textAlignment="CENTER">
+                                    <HBox.margin>
+                                        <Insets left="5.0" />
+                                    </HBox.margin>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </Button>
+                     </children>
+                  </HBox>
+                    </children>
+                    <VBox.margin>
+                        <Insets left="5.0" right="5.0" top="10.0" />
+                    </VBox.margin>
+                </HBox>
+                <TableView fx:id="tblVwTimes" onMouseClicked="#tblVwClick" prefHeight="576.0" prefWidth="600.0">
+                    <columns>
+                        <TableColumn prefWidth="79.0" resizable="false" style="-fx-aligment: CENTER_LEFT" text="Classificação">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="clas" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="colNome" prefWidth="215.0" resizable="false" style="-fx-aligment: CENTER_LEFT" text="Time">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="nome" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="colPontos" maxWidth="229.0" minWidth="64.0" prefWidth="86.0" resizable="false" style="-fx-aligment: CENTER_RIGHT" text="Pontuação">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="pontos" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="colVitorias" maxWidth="251.0" minWidth="51.0" prefWidth="82.0" resizable="false" style="-fx-aligment: CENTER_RIGHT" text="Vitorias">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="vit" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="colDerrotas" maxWidth="247.0" minWidth="46.0" prefWidth="85.0" resizable="false" style="-fx-aligment: CENTER_RIGHT" text="Derrotas">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="der" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="colEmpates" maxWidth="251.0" minWidth="49.0" prefWidth="88.0" resizable="false" style="-fx-aligment: CENTER_RIGHT" text="Empates">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="emp" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="golsP" maxWidth="245.0" minWidth="35.0" prefWidth="51.0" resizable="false" style="-fx-aligment: CENTER_RIGHT" text="GP">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="golP" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="golsN" maxWidth="247.0" minWidth="26.0" prefWidth="52.0" resizable="false" style="-fx-aligment: CENTER_RIGHT" text="GC">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="golN" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="saldoGols" maxWidth="281.0" minWidth="64.0" prefWidth="95.0" resizable="false" style="-fx-aligment: CENTER_RIGHT" text="Saldo de Gols">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="saldoGols" />
+                            </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                    <VBox.margin>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                    </VBox.margin>
+                </TableView>
+            </children>
+        </VBox>
+        <StackPane fx:id="pnJogos" prefHeight="600.0" prefWidth="850.0" style="-fx-background-color: F4F4F4;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                    <children>
+                  <HBox alignment="CENTER" prefHeight="41.0" prefWidth="850.0">
+                     <children>
+                        <Label text="Resultados">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="41.0" prefWidth="850.0">
+                     <children>
+                              <Label fx:id="lblNomeTime" text="Time">
+                                  <font>
+                                      <Font name="Segoe UI Italic" size="26.0" />
+                                  </font>
+                              </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="41.0" prefWidth="850.0">
+                     <children>
+                        <RadioButton fx:id="rdBtnTodos" mnemonicParsing="false" onAction="#rdBtnFiltroTodos" selected="true" text="Todos">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="filtroListar" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" onAction="#rdBtnFiltroVit" text="Vitórias" toggleGroup="$filtroListar">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" onAction="#rdBtnFiltroEmp" text="Empates" toggleGroup="$filtroListar">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" onAction="#rdBtnFiltroDer" text="Derrotas" toggleGroup="$filtroListar">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </HBox>
+                        <TableView fx:id="tblVwJogo" prefHeight="522.0" prefWidth="850.0">
+                            <columns>
+                                <TableColumn fx:id="colTimeA" maxWidth="338.0" minWidth="120.0" prefWidth="315.0" resizable="false" style="-fx-alignment: CENTER_LEFT;" text="Casa">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="TimeA" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn fx:id="golA" maxWidth="360.0" minWidth="0.0" prefWidth="110.0" resizable="false" style="-fx-alignment: CENTER;">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="GolA" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn fx:id="golB" maxWidth="360.0" minWidth="0.0" prefWidth="111.0" resizable="false" style="-fx-alignment: CENTER;">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="GolB" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn fx:id="colTimeB" maxWidth="599.0" minWidth="62.0" prefWidth="299.0" resizable="false" style="-fx-alignment: CENTER_RIGHT;" text="Visitante">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="TimeB" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                            </columns>
+                        </TableView>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#btnAbrirJsonClick" text="Abrir JSON">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin></Button>
+                        <Button mnemonicParsing="false" onAction="#btnSalvarJsonJogo" text="Salvar JSON">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#btnLimparListaClick" text="Limpar">
+                           <HBox.margin>
+                              <Insets bottom="2.0" />
+                           </HBox.margin></Button>
+                              <Button mnemonicParsing="false" onAction="#btnFecharTimeClick" text="Fechar">
+                           <HBox.margin>
+                              <Insets bottom="2.0" />
+                           </HBox.margin>
+                              </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </StackPane>
+    </children>
+</AnchorPane>

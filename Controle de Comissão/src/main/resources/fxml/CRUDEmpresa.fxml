@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import org.controlsfx.control.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.CRUDEmpresaController">
+    <stylesheets>
+        <URL value="@/styles/Styles.css" />
+    </stylesheets>
+    <children>
+        <VBox AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
+            <children>
+            <Label fx:id="lblNome" text="NOME_EMPRESA">
+               <VBox.margin>
+                  <Insets bottom="3.0" left="5.0" top="2.0" />
+               </VBox.margin>
+            </Label>
+                <HBox prefHeight="17.0" prefWidth="500.0" spacing="5.0">
+                    <children>
+                        <VBox prefHeight="47.0" prefWidth="190.0" spacing="5.0">
+                            <children>
+                                <Label text="%razaosocial.text" />
+                                <TextField fx:id="txtFldRazao" prefHeight="25.0" prefWidth="90.0" />
+                            </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                        </VBox>
+                        <VBox prefHeight="47.0" prefWidth="190.0" spacing="5.0">
+                            <children>
+                                <Label text="%fantasia.text" />
+                                <TextField fx:id="txtFldFantasia" prefHeight="25.0" prefWidth="375.0" />
+                            </children>
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                        </VBox>
+                  <VBox prefWidth="110.0" spacing="5.0">
+                     <children>
+                        <Label text="%cnpj.text" />
+                        <TextField fx:id="txtFldCNPJ" prefHeight="25.0" prefWidth="90.0" />
+                     </children>
+                  </VBox>
+                    </children>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+                </HBox>
+                <HBox alignment="BOTTOM_CENTER" spacing="5.0">
+                    <children>
+                  <VBox prefHeight="42.0" prefWidth="291.0">
+                     <children>
+                        <Label text="%cidadesing.text" />
+                        <ComboBox fx:id="cmbBxCidade" prefHeight="25.0" prefWidth="296.0" />
+                     </children>
+                  </VBox>
+                        <Button fx:id="btnConfirma" mnemonicParsing="false" onAction="#btnConfirmaClick" prefWidth="100.0" text="%confirmar.text">
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#btnCancelaClick" prefWidth="100.0" text="%cancelar.text">
+                        </Button>
+                    </children>
+                    <padding>
+                        <Insets bottom="5.0" top="2.0" />
+                    </padding>
+                </HBox>
+            
+            </children>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>
